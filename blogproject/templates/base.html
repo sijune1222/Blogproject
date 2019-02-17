@@ -19,7 +19,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Sijune</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,14 +27,9 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'home' %}">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
 
                  {% if user.is_authenticated %}
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">환영합니다. {{ user.username }} 님!</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="{% url 'newblog' %}">글쓰기</a>
@@ -54,7 +49,7 @@
                 </li>
                 {% endif %}
 
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="{% url 'portfolio' %}">portfolio</a>
                 </li>
             </ul>
