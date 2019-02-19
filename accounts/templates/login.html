@@ -1,5 +1,8 @@
 {% extends 'base.html' %} 
 
+{% load socialaccount %} 
+{% providers_media_js%}
+
 {% block contents %}
 <div class="container">
     <br>
@@ -16,7 +19,12 @@
         <input name="password" type="password" value="">
         <br><br>
         <button type="submit" class="btn btn-outline-primary">Login</button>
+        <button class="btn btn-outline-primary"><a href="{% url 'signup' %}">Signup</a></button>
     </form>
-
+ 
+    <br><br><br>
+    <a href="{% provider_login_url 'google' %}">구글 로그인</a>
+ 
+   
 </div>
 {% endblock %}
