@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blogapp.apps.BlogappConfig',
     'portfolio.apps.PortfolioConfig',
     'accounts.apps.AccountsConfig',
+    'imagekit',
 
     #allauth와 관련된
     'allauth',
